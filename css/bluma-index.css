@@ -12139,8 +12139,7 @@ print {
 }
 
 @media screen and (max-width:1023px) {
-    .hero.is-dark .navbar-menu {
-        background-color: #363636
+    .hero.is-dark .navbar-menu {        background-color: #363636
     }
 }
 
