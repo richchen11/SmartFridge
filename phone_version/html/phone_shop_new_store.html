@@ -26,6 +26,15 @@
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+
+.center-left {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  right:85%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
 </style>
 
   <body>
@@ -33,53 +42,37 @@
       <div class="column is-half">
         <div class="box">
           <h1 class="has-background-black has-text-black">TEXT SAMPLE</h1>
-
           <section class="hero is-primary">
             <div class="hero-body">
               <div class="container">
+                <div class="center-left">
+                  <a class="button is-primary is-inverted is-outlined is-centered" href="phone_shop.html">Back</a>
+                </div>
+
                 <div class="center">
-                  <h1 class="title">Shop</h1>
+                  <h1 class="title">Stores</h1>
                 </div>
+
+            </div>
+          </div>
+        </section>
+
+
+          <section class="section">
+            <div class="container">
+              <div class="columns is-centered">
+                <figure>
+                  <table class="table">
+                    <thead>
+                      <th>Stores<th>
+                    </thead>
+
+                  </table>
+                </figure>
               </div>
             </div>
           </section>
 
-          <section class="section">
-            <input class="input is-rounded" type="text" placeholder="Search">
-          </section>
-
-          <section class="section">
-            <div>
-              <h1>
-                My Lists:
-              </h1>
-            </div>
-
-            <div class="columns is-mobile is-centered">
-              <div class="container">
-                <div class="center-right">
-                  <a class="button is-primary is-outlined is-centered" href="phone_shop_new_list.html">+</a>
-                </div>
-              </div>
-            </div>
-
-          </section>
-
-          <section class="section">
-            <div>
-              <h1>
-                My Stores:
-              </h1>
-            </div>
-
-            <div class="columns is-mobile is-centered">
-              <div class="container">
-                <div class="center-right">
-                  <a class="button is-primary is-outlined is-centered" href="phone_shop_new_store.html">+</a>
-                </div>
-              </div>
-            </div>
-          </section>
 
 
 
