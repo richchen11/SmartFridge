@@ -20,21 +20,19 @@
             </div>
           </section>
           <section class="section">
-            <div class="columns">
-              <div class="column"><h1>Inventory Management</h1></div>
-              <div class="column">
-                <button
-                  class="button is-primary is-small"
-                  id="inventoryManagementSection"
-                  onclick="addCategoryInventory()"
-                >
-                  Add a category
-                </button>
-              </div>
-            </div>
+              <nav class="level" id = "inventoryManagementSection">
+                <div class="level-left">
+                  <div class="level-item">Inventory Management</div>
+                </div>
+                <div class="level-right">
+                  <button
+                    class="button is-primary is-small"
+                    onclick="addCategoryFormInventory()"
+                  >
+                    Add a category
+                  </button>
+              </nav>
           </section>
-          <section class="section">Second Fridge Section</section>
-          <section class="section">Third Fridge Section</section>
           <div class="tabs is-centered">
             <ul>
               <li class="is-active"><a>Fridge</a></li>
@@ -48,14 +46,20 @@
     </div>
   </body>
   <script>
-    function addCategoryInventory() {
-      const newDiv = document.createElement("div");
-      const newContent = document.createTextNode("Hi there and greetings!");
-      // add the text node to the newly created div
-      newDiv.appendChild(newContent);
+    function addCategoryFormInventory() {
+      let newForm = document.createElement("input");
+      let newClass = document.createAttribute("class");
+      newClass.value = "input";
+      let newFunction = document.createAttribute("onSubmit");
+      newFunction.value = "handleCategoryFormSubmission()"
+      newForm.setAttributeNode(newClass);
+      newForm.setAttributeNode(newFunction);
       // add the newly created element and its content into the DOM
-      const currentDiv = document.getElementById("inventoryManagementSection");
-      currentDiv.insertAdjacentElement("afterend", newDiv);
+      let currentDiv = document.getElementById("inventoryManagementSection");
+      currentDiv.insertAdjacentElement("afterend", newForm);
+    }
+    function handleCategoryFormSubmission(){
+      console.log("it worked");
     }
   </script>
 </html>
