@@ -5,15 +5,69 @@
 }
 /* On mouse-over, add a deeper shadow */
 .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.card-img-top {
+    width: 100%;
+    border-top-left-radius: calc(.25rem - 1px);
+    border-top-right-radius: calc(.25rem - 1px)
+}
+.card-group>.card:not(:last-child) .card-header,
+.card-group>.card:not(:last-child) .card-img-top {
+    border-top-right-radius: 0
+}
   
+.card-group>.card:not(:first-child) .card-header,
+.card-group>.card:not(:first-child) .card-img-top {
+    border-top-left-radius: 0
+}
+
+.card-title {
+  margin-bottom: .75rem
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff
+}
+.card-text:last-child {
+  margin-bottom: 0
+}
+
+.card-body {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 1.25rem
+}
+
+
 /* Add some padding inside the card container */
 .container {
   padding: 2px 16px;
 }
-
 img.resize {
-  widows: 200px;
-  height:600px;
+  widows: 20px;
+  height: 20px;
+}
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+
+.stretched-link::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: auto;
+  content: "";
+  background-color: rgba(0, 0, 0, 0)
 }
