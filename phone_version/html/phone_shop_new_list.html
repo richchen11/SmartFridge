@@ -92,6 +92,10 @@
 				alert(e);
 			}
 		}
+
+  function save(){
+    alert("Your list has been saved! (Not really in the protype)");
+  }
 	</SCRIPT>
 
   <body>
@@ -110,7 +114,7 @@
                   <input class="input is-rounded" type="text" placeholder="Name"></input>
                 </div>
                 <div class="center-right">
-                  <input type="submit" class="button is-primary is-inverted is-outlined is-centered" value="Save"></input>
+                  <input type="submit" class="button is-primary is-inverted is-outlined is-centered" value="Save" onclick=save()></input>
                 </div>
               </div>
             </div>
@@ -136,6 +140,7 @@
                   				<SELECT id="country">
                   					<OPTION value="sf">Safeway</OPTION>
                   					<OPTION value="gi">Giant</OPTION>
+                            <OPTION value="gi">Walmart</OPTION>
                   				</SELECT>
                   			</td>
                         <td><INPUT type="text" name="txt"/></td>
