@@ -92,8 +92,6 @@
 				alert(e);
 			}
 		}
-
-
 	</SCRIPT>
 
   <body>
@@ -112,7 +110,7 @@
                   <input class="input is-rounded" type="text" placeholder="Name"></input>
                 </div>
                 <div class="center-right">
-                  <button class="button is-primary is-inverted is-outlined is-centered">Save</button>
+                  <input type="submit" class="button is-primary is-inverted is-outlined is-centered" value="Save"></input>
                 </div>
               </div>
             </div>
@@ -121,32 +119,32 @@
           <section class="section">
               <div class="columns is-mobile is-centered">
                 <figure>
-                  <TABLE class="table" id="dataTable" width="350px">
+                  <table class="table" id="dataTable" width="350px">
+                    <thead>
+                      <tr>
+                        <th> </th>
+                        <th>Item</th>
+                        <th>Store</th>
+                        <th>Quantity</th>
+                      </tr>
+                    </thead>
                     <tbody>
-                  		<TR>
-                        <TD><INPUT type="checkbox" name="chk"/></TD>
-                  			<TD><INPUT type="text" name="txt"/></TD>
-                  			<TD>
+                  		<tr>
+                        <td><INPUT type="checkbox" name="chk"/></td>
+                  			<td><INPUT type="text" name="txt"/></td>
+                  			<td>
                   				<SELECT id="country">
                   					<OPTION value="sf">Safeway</OPTION>
                   					<OPTION value="gi">Giant</OPTION>
                   				</SELECT>
-                  			</TD>
-                        <TD><INPUT type="text" name="txt"/></TD>
-                  		</TR>
-                    <tbody>
-                      <thead>
-                        <tr>
-                          <th> </th>
-                          <th>Item</th>
-                          <th>Store</th>
-                          <th>Quantity</th>
-                        </tr>
-                      </thead>
-                	</TABLE>
-                  <figure>
-                </div>
-              </section>
+                  			</td>
+                        <td><INPUT type="text" name="txt"/></td>
+                  		</tr>
+                    </tbody>
+                	</table>
+                </figure>
+              </div>
+            </section>
 
               <section class="section">
                   <div class="columns is-mobile is-centered">
