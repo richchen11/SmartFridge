@@ -15,16 +15,20 @@
 .card-group>.card:not(:last-child) .card-header,
 .card-group>.card:not(:last-child) .card-img-top {
     border-top-right-radius: 0
-}
-  
+} 
 .card-group>.card:not(:first-child) .card-header,
 .card-group>.card:not(:first-child) .card-img-top {
     border-top-left-radius: 0
 }
-
 .card-title {
   margin-bottom: .95rem
 }
+.card-img {
+  width: 100%!important;
+  height: 270px!important;
+  object-fit:cover;
+}
+
 
 .btn-primary {
   color: #fff;
@@ -77,4 +81,31 @@ img.resize {
   margin-bottom: 0;
   background-color: rgba(0, 0, 0, .03);
   border-bottom: 1px solid rgba(0, 0, 0, .125)
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.center-right {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left:90%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.center-left {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left:10%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
