@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SmartFridge</title>
+    <link rel="stylesheet" href="../css/phone.css" />
+  </head>
+
+  <style>
+
+    .center {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+    
+    .center-right {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left:95%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+    
+    figcaption {
+        text-align: center
+    }
+    
+    </style>
+  <body>
+    <div class="columns is-mobile is-centered">
+      <div class="column is-half">
+        <div class="box">
+          <h1 class="has-background-black has-text-black">TEXT SAMPLE</h1>
+          <section class="hero is-primary">
+            <div class="hero-body">
+              <div class="container">
+                <div class = "center">
+                  <h1 class="title">Inventory</h1>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="section">
+            <nav class="level" id = "inventoryManagementSection">
+              <div class="level-left">
+                <div class="level-item"><strong>Inventory Management</strong></div>
+              </div>
+              <div class="level-right">
+                <button
+                  class="button is-primary is-small"
+                  onclick="addCategoryFormInventory()"
+                >
+                  Add a category
+                </button>
+            </nav>
+            <article class="message is-primary">
+              <div class="message-header">
+                <p>Fresh Fruit</p>
+                  <button class="delete" aria-label="delete"></button>
+              </div>
+              <div class="message-body">
+                3 Oranges
+                <button class="delete" aria-label="delete"></button>
+              </div>
+              <div class="message-body">
+                4 Apples
+                <button class="delete" aria-label="delete"></button>
+              </div>
+              <div class="message-header">
+                <p>Beverages</p>
+                <button class="delete" aria-label="delete"></button>
+                </div>
+                <div class="message-body">
+                  8 cans of Coca-Cola
+                  <button class="delete" aria-label="delete"></button>
+                </div>
+                <div class="message-body">
+                  2 liter Lemonade
+                  <button class="delete" aria-label="delete"></button>
+              </div>
+            </article>
+          </section>
+          <div class="tabs is-centered">
+            <ul>
+              <li class="is-active"><a>Inventory</a></li>
+              <li><a href="phone_shop.html">Shop </a></li>
+              <li><a href="phone_calories.html">Calories</a></li>
+              <li><a href="phone_recipes.html">Recipes</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    function addCategoryFormInventory() {
+      let newForm = document.createElement("input");
+      let newClass = document.createAttribute("class");
+      newClass.value = "input";
+      let newFunction = document.createAttribute("onSubmit");
+      newFunction.value = "handleCategoryFormSubmission()"
+      newForm.setAttributeNode(newClass);
+      newForm.setAttributeNode(newFunction);
+      // add the newly created element and its content into the DOM
+      let currentDiv = document.getElementById("inventoryManagementSection");
+      currentDiv.insertAdjacentElement("afterend", newForm);
+    }
+    function handleCategoryFormSubmission(){
+      console.log("it worked");
+    }
+  </script>
+</html>
