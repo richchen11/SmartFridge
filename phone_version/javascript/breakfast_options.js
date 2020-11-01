@@ -1,4 +1,4 @@
-[
+const breakfastData = [
     {
         "discription": "Regardless of how much of a hurry you are in, pancakes is one breakfast that you really do need to take slow. This makes them a fantastic way to slow down and get your day going on the right food, rather than rushing right from the start.",
         "meal_name": "Pancakes and Syrup",
@@ -50,3 +50,5 @@
         "img": "../images/breakfast_pictures/avocado_toast.png"
     }
 ]
+
+export default breakfastData
