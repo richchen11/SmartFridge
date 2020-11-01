@@ -53,12 +53,14 @@ let breakfastData = [
         imgs: "../images/breakfast_pictures/avocado_toast.png"
     }
 ]
+
 function renderBreakfastData() {
     // Create card element
     const cardDeck = document.getElementById('carddeck');
     
     breakfastData.forEach(menuOption => {
         const cardContainer = document.createElement("div");
+        
         const content = `
         <div class="card mb-3">
             <img src="${menuOption.imgs}" class="card-img" alt="...">
