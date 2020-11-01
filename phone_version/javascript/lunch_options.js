@@ -1,4 +1,4 @@
-[
+const lunch_options = [
     {
         "discription": "A delicious, rich and tasty cold chicken salad! Whipped cream gives this a lift. Serve on a lettuce leaf or in sandwiches.",
         "meal_name": "Chicken Salad",
