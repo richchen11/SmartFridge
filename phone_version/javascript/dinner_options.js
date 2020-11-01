@@ -1,4 +1,4 @@
-[
+const dinner_data = [
     {
         "discription": "When I have leftover steak, it’s time to make cilantro tacos. Set out bowls of toppings like lettuce, tomatoes, sour cream, avocado and salsa.",
         "meal_name": "Beef Tacos",
