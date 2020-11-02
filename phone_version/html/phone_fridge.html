@@ -8,7 +8,6 @@
   </head>
 
   <style>
-
     .center {
       margin: 0;
       position: absolute;
@@ -46,6 +45,14 @@
               </div>
             </div>
           </section>
+          <section class = "section">
+            <div class="level-left">
+              <div class="level-item"><strong>Camera</strong></div>
+            </div>
+            <figure class="image is-128x128 is-centered">
+              <img src ="../images/fridge_picture.jpg">
+            </figure>
+          </section>
           <section class="section">
             <nav class="level" id = "inventoryManagementSection">
               <div class="level-left">
@@ -60,30 +67,34 @@
                 </button>
             </nav>
             <article class="message is-primary">
+              <div id = "freshFruit">
               <div class="message-header">
                 <p>Fresh Fruit</p>
-                  <button class="delete" aria-label="delete"></button>
+                  <button class="delete" aria-label="delete" onclick = "myDelete(freshFruit)"></button>
               </div>
-              <div class="message-body">
+              <div class="message-body" id = "oranges">
                 3 Oranges
-                <button class="delete" aria-label="delete"></button>
+                <button class="delete" aria-label="delete" onclick = "myDelete(oranges)"></button>
               </div>
-              <div class="message-body">
+              <div class="message-body" id = "apples">
                 4 Apples
-                <button class="delete" aria-label="delete"></button>
+                <button class="delete" aria-label="delete" onclick = "myDelete(apples)"></button>
               </div>
+            </div>
+              <div id = "beverages">
               <div class="message-header">
                 <p>Beverages</p>
-                <button class="delete" aria-label="delete"></button>
+                <button class="delete" aria-label="delete" onclick = "myDelete(beverages)"></button>
                 </div>
-                <div class="message-body">
+                <div class="message-body" id = "coke">
                   8 cans of Coca-Cola
-                  <button class="delete" aria-label="delete"></button>
+                  <button class="delete" aria-label="delete" onclick = "myDelete(coke)" ></button>
                 </div>
-                <div class="message-body">
-                  2 liter Lemonade
-                  <button class="delete" aria-label="delete"></button>
+                <div class="message-body" id = "lemonade">
+                  2 liters of Lemonade
+                  <button class="delete" aria-label="delete" onclick = "myDelete(lemonade)"></button>
               </div>
+            </div>
             </article>
           </section>
           <div class="tabs is-centered">
@@ -111,8 +122,8 @@
       let currentDiv = document.getElementById("inventoryManagementSection");
       currentDiv.insertAdjacentElement("afterend", newForm);
     }
-    function handleCategoryFormSubmission(){
-      console.log("it worked");
+    function myDelete(element){
+      element.parentNode.removeChild(element);
     }
   </script>
 </html>
