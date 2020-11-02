@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SmartFridge</title>
+    <link rel="stylesheet" href="../css/tablet.css" />
+  </head>
+
+<style>
+        .myinput {
+      display :none
+      }
+</style>  
+  <body>
+    <div class="columns is-mobile is-centered">
+      <div class="column is-four-fifths">
+        <div class="box">
+         <section class="hero is-primary">
+            <div class="hero-body">
+              <div class="container">
+                <h1 class="title">Inventory</h1>
+              </div>
+            </div>
+          </section>
+
+           <div class = "columns is-mobile is-centered">
+              <div class = "column is-one-quarter">
+               <aside class="menu">
+                  <ul class = "menu-list">
+                     <li class="is-active"><a>Fridge</a></li>
+                     <li><a href="tablet_shop.html">Shop </a></li>
+                     <li><a href="tablet_calories.html">Calories</a></li>
+                     <li><a href="tablet_recipes.html">Recipes</a></li>
+                   </ul>
+               </aside>
+              </div>
+              <div class = "column">
+                <section class="section">
+                  <nav class="level" id = "inventoryManagementSection">
+                     <div class="level-left">
+                        <div class="level-item"><strong>Inventory Management</strong></div>
+                     </div>
+                     <div class="level-right">
+                        <button
+                           class="button is-primary is-small"
+                           onclick="addCategoryFormInventory()"
+                           >
+                        Add a category
+                        </button>
+                  </nav>
+                  <div class="myinput" id = "myinput">
+                  <input id = "categoryInput" class="input" type="text" placeholder="Enter Category Name" style.visibility = "hidden">
+                  <button class = "button is-primary is-small" onclick = "handleCategoryFormSubmission()">Submit</button>
+                  </div>
+                  <article class="message is-primary" id = "categories">
+                  <div id = "freshFruit">
+                  <div class="message-header">
+                  Fresh Fruit
+                  <button class="delete" onclick = "myDelete(freshFruit)"></button>
+                  <button class = "button" onclick = "addItem(freshFruit)"> + </button>
+                  </div>
+                  <div class="message-body" id = "oranges">
+                  3 Oranges
+                  <button class="delete" aria-label="delete" onclick = "myDelete(oranges)"></button>
+                  </div>
+                  <div class="message-body" id = "apples">
+                  4 Apples
+                  <button class="delete" aria-label="delete" onclick = "myDelete(apples)"></button>
+                  </div>
+                  </div>
+                  <div id = "beverages">
+                  <div class="message-header">
+                  Beverages
+                  <button class="delete" aria-label="delete" onclick = "myDelete(beverages)"></button>
+                  </div>
+                  <div class="message-body" id = "coke">
+                  8 cans of Coca-Cola
+                  <button class="delete" aria-label="delete" onclick = "myDelete(coke)" ></button>
+                  </div>
+                  <div class="message-body" id = "lemonade">
+                  2 liters of Lemonade
+                  <button class="delete" aria-label="delete" onclick = "myDelete(lemonade)"></button>
+                  </div>
+                  </div>
+                  </article>
+               </section>
+              </div>
+           </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    function addCategoryFormInventory() {
+        document.getElementById("myinput").style.display = 'block';
+      }
+      
+      function handleCategoryFormSubmission(){
+        document.getElementById("myinput").style.display = 'none';
+        let inputVal = document.getElementById("categoryInput").value;
+        let newCategory = document.createElement('div');
+        let newClass = document.createAttribute("class");
+        newClass.value = "message-header";
+        newCategory.setAttributeNode(newClass);
+        newCategory.innerHTML = inputVal;
+      
+        let newButton = document.createElement('button');
+        let buttonClass = document.createAttribute('class');
+        let buttonFunction = document.createAttribute('onclick');
+        buttonClass.value = "delete";
+        buttonFunction.value = "myDelete(" + inputVal + ")";
+        newButton.setAttributeNode(buttonClass);
+        newButton.setAttributeNode(buttonFunction);
+      
+        newCategory.appendChild(newButton);
+        // add the newly created element and its content into the DOM
+        let currentDiv = document.getElementById("categories");
+        currentDiv.appendChild(newCategory);
+        document.getElementById('categoryInput').value = "";
+      }
+      
+      function myDelete(element){
+        element.parentNode.removeChild(element);
+      }
+      function addItem(element){
+        
+      }
+  </script>
+</html>
