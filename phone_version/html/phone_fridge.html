@@ -30,6 +30,9 @@
         text-align: center
     }
     
+    .temp {
+        display :none
+    }
     </style>
   <body>
     <div class="columns is-mobile is-centered">
@@ -66,10 +69,14 @@
                   Add a category
                 </button>
             </nav>
-            <article class="message is-primary">
+<div class="temp" id = "temp">
+  <input id = "categoryInput" class="input" type="text" placeholder="Enter Category Name" style.visibility = "hidden">
+  <button class = "button is-primary is-small" onclick = "handleCategoryFormSubmission()">Submit</button>
+</div>
+            <article class="message is-primary" id = "categories">
               <div id = "freshFruit">
               <div class="message-header">
-                <p>Fresh Fruit</p>
+                Fresh Fruit
                   <button class="delete" aria-label="delete" onclick = "myDelete(freshFruit)"></button>
               </div>
               <div class="message-body" id = "oranges">
@@ -83,7 +90,7 @@
             </div>
               <div id = "beverages">
               <div class="message-header">
-                <p>Beverages</p>
+                Beverages
                 <button class="delete" aria-label="delete" onclick = "myDelete(beverages)"></button>
                 </div>
                 <div class="message-body" id = "coke">
@@ -99,7 +106,7 @@
           </section>
           <div class="tabs is-centered">
             <ul>
-              <li class="is-active"><a>Inventory</a></li>
+              <li class="is-active"><a>Fridge</a></li>
               <li><a href="phone_shop.html">Shop </a></li>
               <li><a href="phone_calories.html">Calories</a></li>
               <li><a href="phone_recipes.html">Recipes</a></li>
@@ -111,18 +118,30 @@
   </body>
   <script>
     function addCategoryFormInventory() {
-      let newForm = document.createElement("input");
-      let newClass = document.createAttribute("class");
-      newClass.value = "input";
-      let newFunction = document.createAttribute("onSubmit");
-      newFunction.value = "handleCategoryFormSubmission()"
-      newForm.setAttributeNode(newClass);
-      newForm.setAttributeNode(newFunction);
-      // add the newly created element and its content into the DOM
-      let currentDiv = document.getElementById("inventoryManagementSection");
-      currentDiv.insertAdjacentElement("afterend", newForm);
+      document.getElementById("temp").style.display = 'block';
     }
+
+    function handleCategoryFormSubmission(){
+      document.getElementById("temp").style.display = 'none';
+      let inputVal = document.getElementById("categoryInput").value;
+      let newCategory = document.createElement('div');
+      let newClass = document.createAttribute("class");
+      newClass.value = "message-header";
+      newCategory.setAttributeNode(newClass);
+      newCategory.innerHTML = inputVal;
+
+      let newButton = document.createElement('button');
+      let buttonClass = document.createAttribute('delete');
+
+
+      // add the newly created element and its content into the DOM
+      let currentDiv = document.getElementById("categories");
+      currentDiv.appendChild(newCategory);
+
+    }
+
     function myDelete(element){
+
       element.parentNode.removeChild(element);
     }
   </script>
