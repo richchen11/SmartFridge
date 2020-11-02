@@ -7,6 +7,30 @@
     <link rel="stylesheet" href="../css/tablet.css" />
   </head>
 
+  <style>
+
+    .center {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+    
+    .center-right {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left:95%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+    
+    figcaption {
+        text-align: center
+    }
+    </style>
   <body>
     <div class="columns is-mobile is-centered">
       <div class="column is-four-fifths">
@@ -14,7 +38,7 @@
          <section class="hero is-primary">
             <div class="hero-body">
               <div class="container">
-                <h1 class="title">SmartFridge</h1>
+                <h1 class="title">Shop</h1>
               </div>
             </div>
           </section>
@@ -31,21 +55,50 @@
               </div>
               <div class = "column">
                 <section class="section">
-                  <div class="columns">
-                    <div class="column"><h1>Inventory Management</h1></div>
-                    <div class="column">
-                      <button
-                        class="button is-primary is-small"
-                        id="inventoryManagementSection"
-                        onclick="addCategoryInventory()"
-                      >
-                        Add a category
-                      </button>
-                    </div>
-                  </div>
+                  <input class="input is-rounded" type="text" placeholder="Search">
                 </section>
-                <section class="section">Second Fridge Section</section>
-                <section class="section">Third Fridge Section</section>
+
+          <section class="section">
+            <div>
+              <h1>
+                My Lists:
+              </h1>
+            </div>
+
+            <div class="columns is-mobile is-centered">
+              <div class="container">
+                <div class="center-right">
+                  <a class="button is-primary is-outlined is-centered" href="tablet_shop_new_list.html">+</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="container">
+              <div class="columns is-mobile">
+                <figure>
+                  <table class="table">
+                    <tr>
+                      <td>
+                        <figure class="image is-96x96 is-centered">
+                          <a href="tablet_shop_new_store.html">
+                            <img class="is-rounded is-centered" src="../images/list.png" >
+                            <figcaption>List:10/24</figcaption>
+                          </a>
+                        </td>
+                        <td>
+                          <figure class="image is-96x96 is-centered">
+                            <a href="tablet_shop_new_store.html">
+                              <img class="is-rounded is-centered" src="../images/list.png" >
+                              <figcaption>Party</figcaption>
+                            </a>
+                          </td>
+                      </figure>
+                    </tr>
+                  </table>
+                </figure>
+              </div>
+            </div>
+          </section>
               </div>
            </div>
         </div>
@@ -53,14 +106,5 @@
     </div>
   </body>
   <script>
-    function addCategoryInventory() {
-      const newDiv = document.createElement("div");
-      const newContent = document.createTextNode("Hi there and greetings!");
-      // add the text node to the newly created div
-      newDiv.appendChild(newContent);
-      // add the newly created element and its content into the DOM
-      const currentDiv = document.getElementById("inventoryManagementSection");
-      currentDiv.insertAdjacentElement("afterend", newDiv);
-    }
   </script>
 </html>

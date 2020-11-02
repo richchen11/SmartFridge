@@ -57,34 +57,42 @@
                   <div id = "freshFruit">
                   <div class="message-header">
                   Fresh Fruit
-                  <button class="delete" onclick = "myDelete(freshFruit)"></button>
+                  <div class = "buttons">
+                   <button class = "button" onclick = "myDelete(freshFruit)"> - </button>
                   <button class = "button" onclick = "addItem(freshFruit)"> + </button>
+                  </div>
                   </div>
                   <div class="message-body" id = "oranges">
                   3 Oranges
-                  <button class="delete" aria-label="delete" onclick = "myDelete(oranges)"></button>
+                   <button class = "button" onclick = "myDelete(oranges)"> - </button>
                   </div>
                   <div class="message-body" id = "apples">
                   4 Apples
-                  <button class="delete" aria-label="delete" onclick = "myDelete(apples)"></button>
+                   <button class = "button" onclick = "myDelete(apples)"> - </button>
                   </div>
+                  <div class="message-body" id = "peaches">
+                   5 Peaches
+                    <button class = "button" onclick = "myDelete(peaches)"> - </button>
+                   </div>
                   </div>
                   <div id = "beverages">
                   <div class="message-header">
                   Beverages
-                  <button class="delete" aria-label="delete" onclick = "myDelete(beverages)"></button>
+                  <div class = "buttons">
+                   <button class = "button" onclick = "myDelete(beverages)"> - </button>
+                  <button class = "button" onclick = "addItem(beverages)"> + </button>
+                  </div>
                   </div>
                   <div class="message-body" id = "coke">
                   8 cans of Coca-Cola
-                  <button class="delete" aria-label="delete" onclick = "myDelete(coke)" ></button>
+                  <button class="button" onclick = "myDelete(coke)" > - </button>
                   </div>
                   <div class="message-body" id = "lemonade">
                   2 liters of Lemonade
-                  <button class="delete" aria-label="delete" onclick = "myDelete(lemonade)"></button>
+                  <button class="button"  onclick = "myDelete(lemonade)"> - </button>
                   </div>
                   </div>
                   </article>
-               </section>
               </div>
            </div>
         </div>
@@ -92,31 +100,20 @@
     </div>
   </body>
   <script>
-    function addCategoryFormInventory() {
+     function addCategoryFormInventory() {
         document.getElementById("myinput").style.display = 'block';
       }
-      
       function handleCategoryFormSubmission(){
         document.getElementById("myinput").style.display = 'none';
         let inputVal = document.getElementById("categoryInput").value;
-        let newCategory = document.createElement('div');
-        let newClass = document.createAttribute("class");
-        newClass.value = "message-header";
-        newCategory.setAttributeNode(newClass);
-        newCategory.innerHTML = inputVal;
-      
-        let newButton = document.createElement('button');
-        let buttonClass = document.createAttribute('class');
-        let buttonFunction = document.createAttribute('onclick');
-        buttonClass.value = "delete";
-        buttonFunction.value = "myDelete(" + inputVal + ")";
-        newButton.setAttributeNode(buttonClass);
-        newButton.setAttributeNode(buttonFunction);
-      
-        newCategory.appendChild(newButton);
-        // add the newly created element and its content into the DOM
+        let xmlString = "<div id = \'" + inputVal + "\'> <div class = 'message-header'>" + inputVal + " \
+         <button class = \'delete\' onclick = \'myDelete(" + inputVal + ")\'>" + "</button></div></div>";
+
+        var newCategory = new DOMParser().parseFromString(xmlString, "text/xml");
+    
+        console.log(newCategory.documentElement);
         let currentDiv = document.getElementById("categories");
-        currentDiv.appendChild(newCategory);
+        currentDiv.prepend(newCategory.documentElement);
         document.getElementById('categoryInput').value = "";
       }
       

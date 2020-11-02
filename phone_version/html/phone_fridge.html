@@ -73,30 +73,39 @@
                <div id = "freshFruit">
                <div class="message-header">
                Fresh Fruit
-               <button class="delete" onclick = "myDelete(freshFruit)"></button>
+               <div class = "buttons">
+                <button class = "button" onclick = "myDelete(freshFruit)"> - </button>
                <button class = "button" onclick = "addItem(freshFruit)"> + </button>
+               </div>
                </div>
                <div class="message-body" id = "oranges">
                3 Oranges
-               <button class="delete" onclick = "myDelete(oranges)"></button>
+                <button class = "button" onclick = "myDelete(oranges)"> - </button>
                </div>
                <div class="message-body" id = "apples">
                4 Apples
-               <button class="delete" onclick = "myDelete(apples)"></button>
+                <button class = "button" onclick = "myDelete(apples)"> - </button>
                </div>
+               <div class="message-body" id = "peaches">
+                5 Peaches
+                 <button class = "button" onclick = "myDelete(peaches)"> - </button>
+                </div>
                </div>
                <div id = "beverages">
                <div class="message-header">
                Beverages
-               <button class="delete"  onclick = "myDelete(beverages)"></button>
+               <div class = "buttons">
+                <button class = "button" onclick = "myDelete(beverages)"> - </button>
+               <button class = "button" onclick = "addItem(beverages)"> + </button>
+               </div>
                </div>
                <div class="message-body" id = "coke">
                8 cans of Coca-Cola
-               <button class="delete" onclick = "myDelete(coke)" ></button>
+               <button class="button" onclick = "myDelete(coke)" > - </button>
                </div>
                <div class="message-body" id = "lemonade">
                2 liters of Lemonade
-               <button class="delete"  onclick = "myDelete(lemonade)"></button>
+               <button class="button"  onclick = "myDelete(lemonade)"> - </button>
                </div>
                </div>
                </article>
@@ -117,7 +126,6 @@
       function addCategoryFormInventory() {
         document.getElementById("myinput").style.display = 'block';
       }
-      
       function handleCategoryFormSubmission(){
         document.getElementById("myinput").style.display = 'none';
         let inputVal = document.getElementById("categoryInput").value;
