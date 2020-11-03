@@ -69,6 +69,7 @@ function renderBreakfastData() {
                 <h7 class="card-title"><h5><b>${menuOption.mealName}</b></h7>
                 <p class="card-text">${menuOption.discription}</p>
                 <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <a href="../html/phone_receipe_instruction.html" class="btn btn-primary stretched-link"></a>
             </div>
         </div>
         `;
