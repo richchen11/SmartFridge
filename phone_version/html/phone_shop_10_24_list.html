@@ -36,6 +36,18 @@
   transform: translate(-50%, -50%);
 }
 
+input[type="text"]::placeholder {
+
+                /* Firefox, Chrome, Opera */
+                text-align: center;
+            }
+
+input{
+
+                /* Firefox, Chrome, Opera */
+                text-align: center;
+            }
+
 </style>
 
 <SCRIPT language="javascript">
@@ -111,7 +123,7 @@
                 </div>
 
                 <div class="center">
-                  <input class="input is-rounded" type="text" placeholder="Name"></input>
+                  <input class="input is-rounded" type="text" value="List:10/24"></input>
                 </div>
                 <div class="center-right">
                   <input type="submit" class="button is-primary is-inverted is-outlined is-centered" value="Save" onclick=save()></input>
@@ -140,7 +152,7 @@
                   				<SELECT id="country">
                   					<OPTION value="sf">Safeway</OPTION>
                   					<OPTION value="gi">Giant</OPTION>
-                            <OPTION value="gi">Walmart</OPTION>
+                            <OPTION value="wal">Walmart</OPTION>
                   				</SELECT>
                   			</td>
                         <td><INPUT type="text" name="txt" value="1"></td>
@@ -152,7 +164,7 @@
                   				<SELECT id="country">
                   					<OPTION value="sf">Safeway</OPTION>
                   					<OPTION value="gi">Giant</OPTION>
-                            <OPTION value="gi">Walmart</OPTION>
+                            <OPTION value="wal">Walmart</OPTION>
                   				</SELECT>
                   			</td>
                         <td><INPUT type="text" name="txt" value="2"></td>
@@ -164,22 +176,22 @@
                   				<SELECT id="country">
                   					<OPTION value="sf">Safeway</OPTION>
                   					<OPTION value="gi">Giant</OPTION>
-                            <OPTION value="gi">Walmart</OPTION>
+                            <OPTION value="wal">Walmart</OPTION>
                   				</SELECT>
                   			</td>
                         <td><INPUT type="text" name="txt" value="1"></td>
                   		</tr>
                       <tr>
                         <td><INPUT type="checkbox" name="chk"/></td>
-                  			<td><input type="text" name="txt" value="Ketchup"></p></td>
+                  			<td><input type="text" name="txt" value="Apples"></p></td>
                   			<td>
                   				<SELECT id="country">
                   					<OPTION value="sf">Safeway</OPTION>
                   					<OPTION value="gi" selected>Giant</OPTION>
-                            <OPTION value="gi">Walmart</OPTION>
+                            <OPTION value="wal">Walmart</OPTION>
                   				</SELECT>
                   			</td>
-                        <td><INPUT type="text" name="txt" value="1"></td>
+                        <td><INPUT type="text" name="txt" value="5"></td>
                   		</tr>
                     </tbody>
                 	</table>
