@@ -1,6 +1,7 @@
 window.onload = () => {
     renderBreakfastData()
 }
+
 let breakfastData = [
     {
         discription : "Regardless of how much of a hurry you are in, pancakes is one breakfast that you really do need to take slow. This makes them a fantastic way to slow down and get your day going on the right food, rather than rushing right from the start.",
