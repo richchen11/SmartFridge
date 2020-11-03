@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SmartFridge</title>
+    <link rel="stylesheet" href="../css/phone.css" />
+  </head>
+
+<style>
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.center-right {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left:95%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.center-left {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  right:85%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+</style>
+
+<SCRIPT language="javascript">
+  function addRow(tableID) {
+
+    var table = document.getElementById(tableID);
+
+    var rowCount = table.rows.length;
+    var row = table.insertRow(rowCount);
+
+    var colCount = table.rows[0].cells.length;
+
+    for(var i=0; i<colCount; i++) {
+
+      var newcell	= row.insertCell(i);
+
+      newcell.innerHTML = table.tBodies[0].rows[0].cells[i].innerHTML;
+      //alert(newcell.childNodes);
+      switch(newcell.childNodes[0].type) {
+        case "text":
+            newcell.childNodes[0].value = "";
+            break;
+        case "checkbox":
+						newcell.childNodes[0].checked = false;
+						break;
+        case "select-one":
+            newcell.childNodes[0].selectedIndex = 0;
+            break;
+      }
+    }
+  }
+
+  function deleteRow(tableID) {
+			try {
+			var table = document.getElementById(tableID);
+			var rowCount = table.rows.length;
+
+			for(var i=0; i<rowCount; i++) {
+				var row = table.rows[i];
+				var chkbox = row.cells[0].childNodes[0];
+				if(null != chkbox && true == chkbox.checked) {
+					if(rowCount <= 1) {
+						alert("Cannot delete all the rows.");
+						break;
+					}
+					table.deleteRow(i);
+					rowCount--;
+					i--;
+				}
+
+
+			}
+			}catch(e) {
+				alert(e);
+			}
+		}
+
+  function save(){
+    alert("Your list has been saved! (Not really in the protype)");
+  }
+	</SCRIPT>
+
+  <body>
+    <div class="columns is-mobile is-centered">
+      <div class="column is-half">
+        <div class="box">
+          <h1 class="has-background-black has-text-black">TEXT SAMPLE</h1>
+          <section class="hero is-primary">
+            <div class="hero-body">
+              <div class="container">
+                <div class="center-left">
+                  <a class="button is-primary is-inverted is-outlined is-centered" href="phone_shop.html">Back</a>
+                </div>
+
+                <div class="center">
+                  <input class="input is-rounded" type="text" placeholder="Name"></input>
+                </div>
+                <div class="center-right">
+                  <input type="submit" class="button is-primary is-inverted is-outlined is-centered" value="Save" onclick=save()></input>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="section">
+              <div class="columns is-mobile is-centered">
+                <figure>
+                  <table class="table" id="dataTable" width="350px">
+                    <thead>
+                      <tr>
+                        <th> </th>
+                        <th>Item</th>
+                        <th>Store</th>
+                        <th>Quantity</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                  		<tr>
+                        <td><INPUT type="checkbox" name="chk"/></td>
+                  			<td><INPUT type="text" name="txt"/></td>
+                  			<td>
+                  				<SELECT id="country">
+                  					<OPTION value="sf">Safeway</OPTION>
+                  					<OPTION value="gi">Giant</OPTION>
+                            <OPTION value="gi">Walmart</OPTION>
+                  				</SELECT>
+                  			</td>
+                        <td><INPUT type="text" name="txt"/></td>
+                  		</tr>
+                    </tbody>
+                	</table>
+                </figure>
+              </div>
+            </section>
+
+              <section class="section">
+                  <div class="columns is-mobile is-centered">
+                    <INPUT class="button" type="button" value="Add" onclick="addRow('dataTable')"/>
+
+                    <INPUT class="button" type="button" value="Delete" onclick="deleteRow('dataTable')" />
+                </figure>
+              </div>
+
+          </section>
+
+
+          <div class="tabs is-centered">
+            <ul>
+              <li><a href="phone_fridge.html">Fridge</a></li>
+              <li class="is-active"><a href="phone_shop.html">Shop</a></li>
+              <li><a href="phone_calories.html">Calories</a></li>
+              <li><a href="phone_recipes.html">Recipes</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
