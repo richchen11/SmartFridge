@@ -8,8 +8,11 @@
   </head>
 
 <style>
-        .myinput {
+      .myinput {
       display :none
+      }
+      .myListInput {
+         display: none
       }
 </style>  
   <body>
@@ -39,11 +42,13 @@
                 <section class="section">
                   <nav class="level" id = "inventoryManagementSection">
                      <div class="level-left">
-                        <div class="level-item"><strong>Inventory Management</strong></div>
+                        <div class="level-item">
+                           <h1 class = "title">Inventory Management</h1>
+                        </div>
                      </div>
                      <div class="level-right">
                         <button
-                           class="button is-primary is-small"
+                           class="button"
                            onclick="addCategoryFormInventory()"
                            >
                         Add a category
@@ -51,48 +56,58 @@
                   </nav>
                   <div class="myinput" id = "myinput">
                   <input id = "categoryInput" class="input" type="text" placeholder="Enter Category Name" style.visibility = "hidden">
-                  <button class = "button is-primary is-small" onclick = "handleCategoryFormSubmission()">Submit</button>
+                  <button class = "button" onclick = "handleCategoryFormSubmission()">Submit</button>
                   </div>
                   <article class="message is-primary" id = "categories">
                   <div id = "freshFruit">
                   <div class="message-header">
                   Fresh Fruit
                   <div class = "buttons">
-                   <button class = "button" onclick = "myDelete(freshFruit)"> - </button>
-                  <button class = "button" onclick = "addItem(freshFruit)"> + </button>
+                  <button class = "button" onclick = "myDelete('freshFruit')">Delete</button>
+                  <button class = "button" onclick = "addItem('myListInput')">Add</button>
                   </div>
                   </div>
+                  <div class = "myListInput" id = "myListInput">
+                     <input id = "listInput" class="input" type="text" placeholder="Enter Item Name" style.visibility = "hidden">
+                     <button class = "button" onclick = "handleItemFormSubmission('listInput', 'freshFruit')">Submit</button>
+                  </div>
+            
                   <div class="message-body" id = "oranges">
                   3 Oranges
-                   <button class = "button" onclick = "myDelete(oranges)"> - </button>
+                  <button class = "button" onclick = "myDelete('oranges')">Delete</button>
                   </div>
                   <div class="message-body" id = "apples">
                   4 Apples
-                   <button class = "button" onclick = "myDelete(apples)"> - </button>
+                  <button class = "button" onclick = "myDelete('apples')">Delete</button>
                   </div>
                   <div class="message-body" id = "peaches">
-                   5 Peaches
-                    <button class = "button" onclick = "myDelete(peaches)"> - </button>
-                   </div>
+                  5 Peaches
+                  <button class = "button" onclick = "myDelete('peaches')">Delete</button>
+                  </div>
                   </div>
                   <div id = "beverages">
                   <div class="message-header">
                   Beverages
                   <div class = "buttons">
-                   <button class = "button" onclick = "myDelete(beverages)"> - </button>
-                  <button class = "button" onclick = "addItem(beverages)"> + </button>
+                  <button class = "button" onclick = "myDelete('beverages')">Delete</button>
+                  <button class = "button" onclick = "addItem('myListInput2')">Add</button>
                   </div>
+                  </div>
+                  <div class = "myListInput" id = "myListInput2">
+                     <input id = "listInput2" class="input" type="text" placeholder="Enter Item Name" style.visibility = "hidden">
+                     <button class = "button" onclick = "handleItemFormSubmission('listInput2', 'beverages')">Submit</button>
                   </div>
                   <div class="message-body" id = "coke">
                   8 cans of Coca-Cola
-                  <button class="button" onclick = "myDelete(coke)"> - </button>
+                  <button class="button" onclick = "myDelete('coke')" >Delete</button>
                   </div>
                   <div class="message-body" id = "lemonade">
                   2 liters of Lemonade
-                  <button class="button"  onclick = "myDelete(lemonade)"> - </button>
+                  <button class="button"  onclick = "myDelete('lemonade')">Delete</button>
                   </div>
                   </div>
                   </article>
+               </section>
               </div>
            </div>
         </div>
@@ -100,28 +115,50 @@
     </div>
   </body>
   <script>
-     function addCategoryFormInventory() {
-        document.getElementById("myinput").style.display = 'block';
-      }
-      function handleCategoryFormSubmission(){
-        document.getElementById("myinput").style.display = 'none';
-        let inputVal = document.getElementById("categoryInput").value;
-        let xmlString = "<div id = \'" + inputVal + "\'> <div class = 'message-header'>" + inputVal + " \
-         <button onclick = \'myDelete(" + inputVal + ")\'> -" + "</button></div></div>";
-
-        var newCategory = new DOMParser().parseFromString(xmlString, "text/xml");
-    
-        console.log(newCategory.documentElement);
-        let currentDiv = document.getElementById("categories");
-        currentDiv.prepend(newCategory.documentElement);
-        document.getElementById('categoryInput').value = "";
-      }
+    function addCategoryFormInventory() {
+      document.getElementById("myinput").style.display = 'block';
+    }
+    function myDelete(element){
+       let deleteElement = document.getElementById(element);
+       deleteElement.parentNode.removeChild(deleteElement);
+    }
+    function handleCategoryFormSubmission(){
+      document.getElementById("myinput").style.display = 'none';
+      let inputVal = document.getElementById("categoryInput").value;
+      let xmlString = "<div id = \'" + inputVal + "Div\'> <div class = 'message-header'>" + inputVal + " \
+       <div class = \'buttons\'> <button class = \'button\' id = \'" + inputVal + "\'> Delete(IN PROGRESS)</button>" +" \
+       <button class = \'button\' onclick = \'addItem(\" " + inputVal + "\")\'> Add(IN PROGRESS)" + 
+       "</button></div></div></div>";
+       console.log(xmlString);
+      var newCategory = new DOMParser().parseFromString(xmlString, "text/xml");
+          
+      let currentDiv = document.getElementById("categories");
+      currentDiv.append(newCategory.documentElement);
+      document.getElementById('categoryInput').value = "";
+      myListener(inputVal);
       
-      function myDelete(element){
-        element.parentNode.removeChild(element);
-      }
-      function addItem(element){
-        
-      }
-  </script>
+    }
+    function myListener(inputVal){
+       document.getElementById(inputVal).onclick = function(){
+          myDelete(inputVal + "Div")
+       };
+       console.log(document.getElementById(inputVal))
+    }
+    function addItem(element){
+       document.getElementById(element).style.display = 'block';
+    }
+    function handleItemFormSubmission(listInput, category){
+       document.getElementById("myListInput").style.display = 'none';
+       document.getElementById("myListInput2").style.display = 'none';
+       let inputVal = document.getElementById(listInput).value;
+       
+       let xmlString = "<div class = 'message-body'>" + inputVal + " \
+       <button class = \'button\'> Delete(IN PROGRESS)</button>" + "</div>";
+       var newItem = new DOMParser().parseFromString(xmlString, "text/xml");
+       let currentDiv = document.getElementById(category);
+       currentDiv.append(newItem.documentElement);
+      document.getElementById('listInput').value = "";
+      document.getElementById('listInput2').value = "";
+    }
+ </script>
 </html>
