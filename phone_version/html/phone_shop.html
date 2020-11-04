@@ -7,46 +7,11 @@
     <link rel="stylesheet" href="../css/phone.css" />
   </head>
 
-<style>
-
-.center {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-.center-right {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left:95%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-figcaption {
-    text-align: center
-}
-
-input[type="text"]::placeholder {
-
-                /* Firefox, Chrome, Opera */
-                text-align: center;
-            }
-
-input{
-
-                /* Firefox, Chrome, Opera */
-                text-align: center;
-            }
-</style>
+<link rel="stylesheet" href="../css/shop.css">
 
   <body>
     <div class="columns is-mobile is-centered">
-      <div class="column is-half">
+      <div class="column is-one-third">
         <div class="box">
           <h1 class="has-background-black has-text-black">TEXT SAMPLE</h1>
 
@@ -56,15 +21,19 @@ input{
                 <div class="center">
                   <h1 class="title">Shop</h1>
                 </div>
+
+                <div class="center-right">
+                  <a class="button is-primary is-inverted is-centered" href="phone_shop_new_list.html">+</a>
+                </div>
               </div>
             </div>
           </section>
 
           <section class="section">
-            <input class="input is-rounded" type="text" placeholder="Search (Search through lists and stores. Not functional in prototype)">
-          </section>
+            <div class="block">
+              <input class="input is-rounded" type="text" placeholder="Search (Find lists and stores. Not in prototype)">
+            </div>
 
-          <section class="section">
             <div>
               <h1><strong>
                 My Lists:
@@ -73,9 +42,6 @@ input{
 
             <div class="columns is-mobile is-centered">
               <div class="container">
-                <div class="center-right">
-                  <a class="button is-primary is-centered" href="phone_shop_new_list.html">+</a>
-                </div>
               </div>
             </div>
 
@@ -107,18 +73,12 @@ input{
           </section>
 
           <section class="section">
+            <div class="block">
               <h1><strong>
                 My Stores:
               </strong></h1>
-
-              <div class="columns is-mobile is-centered">
-                <div class="container">
-                  <div class="center-right">
-                    <a class="button is-primary is-centered" href="phone_shop_stores.html">+</a>
-                  </div>
-                </div>
-              </div>
-
+            </div>
+            
               <div class="container">
                 <div class="columns is-mobile">
                   <figure>
@@ -151,6 +111,16 @@ input{
                   </figure>
                 </div>
               </div>
+        </section>
+
+        <section class="section">
+          <div class="columns is-mobile is-centered">
+            <div class="container">
+              <div class="center">
+                <a class="button is-primary is-centered" href="phone_shop_stores.html">Add Store</a>
+              </div>
+            </div>
+          </div>
         </section>
 
         <div class="tabs is-centered">
