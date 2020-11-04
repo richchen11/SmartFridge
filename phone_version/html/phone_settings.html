@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SmartFridge</title>
+    <link rel="stylesheet" href="../css/phone.css" />
+    <script type="text/javascript" src="../javascript/user_data.js" defer></script>
+  </head>
+
+  <style>
+    .center {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+
+    .center-right {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left:95%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+
+    figcaption {
+        text-align: center
+    }
+  </style>
+
+  <!-- redirects to login if not logged in -->
+  <body onload="isLoggedIn()">
+    <div class="columns is-mobile is-centered">
+      <div class="column is-half">
+        <div class="box">
+          <h1 class="has-background-black has-text-black">TEXT SAMPLE</h1>
+
+          <!-- header -->
+          <section class="hero is-primary">
+            <div class="hero-body">
+              <div class="container">
+                <div class="center">
+                  <h1 class="title">User Settings</h1>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- user info -->
+          <section class="section">
+            <div class="columns is-mobile is-centered">
+              <div class="container">
+                <div class="center-right">
+                  <a class="button is-primary is-outlined is-centered" href="phone_shop_new_list.html">+</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- profile picture -->
+            <div class="container">
+              <div class="columns is-mobile">
+                <figure>
+                  <table class="table">
+                    <tr>
+                      <td>
+                        <figure class="image is-96x96 is-centered">
+                          <img class="is-rounded is-centered" src="https://bulma.io/images/placeholders/96x96.png" id="profile-img">
+                          <figcaption id="profile-name"></figcaption>
+                        </td>
+                      </figure>
+                    </tr>
+                  </table>
+                </figure>
+              </div>
+            </div>
+          </section>
+
+          <section class="section">
+            <div class="columns">
+              <!-- health settings -->
+              <div class="column">
+                <article class="message is-primary">
+                  <div class="message-header">
+                    <p>Health Profile</p>
+                    <button class="button is-small">
+                      <span>Edit</span>
+                    </button>
+                  </div>
+                  <div class="message-body" placeholder="ht" id="ht"></div>
+                  <div class="message-body" placeholder="wt" id="wt"></div>
+                </article>
+              </div>
+              <!-- app preferences -->
+              <div class="column">
+                <article class="message is-primary">
+                  <div class="message-header">
+                    <p>Preferences</p>
+                  </div>
+                  <div class="message-body" placeholder="c1" id="c1">
+                    <div class="columns">
+                      <div class="column">
+                        <button class="button" style="background-color:#c51111;" onClick=setColor(0)></button>
+                      </div>
+                      <div class="column">
+                        <button class="button" style="background-color:#ef7d0d;" onClick=setColor(1)></button>
+                      </div>
+                      <div class="column">
+                        <button class="button" style="background-color:#f5f557;" onClick=setColor(2)></button>
+                      </div>
+                      <div class="column">
+                        <button class="button" style="background-color:#50ef39;" onClick=setColor(3)></button>
+                      </div>
+                      <div class="column">
+                        <button class="button" style="background-color:#117f2d;" onClick=setColor(4)></button>
+                      </div>
+                      <div class="column">
+                        <button class="button" style="background-color:#d6e0f0;" onClick=setColor(5)></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="message-body" placeholder="c2" id="c2">
+                    <div class="columns">
+                      <div class="column">
+                        <button class="button" style="background-color:#00d1b2;" onClick=setColor(6)></button>
+                      </div>
+                      <div class="column">
+                        <button class="button" style="background-color:#132ed1;" onClick=setColor(7)></button>
+                      </div>
+                      <div class="column">
+                        <button class="button" style="background-color:#6b2fbb;" onClick=setColor(8)></button>
+                      </div>
+                      <div class="column">
+                        <button class="button" style="background-color:#ed54ba;" onClick=setColor(9)></button>
+                      </div>
+                      <div class="column">
+                        <button class="button" style="background-color:#71491e;" onClick=setColor(10)></button>
+                      </div>
+                      <div class="column">
+                        <button class="button" style="background-color:#3f47fe;" onClick=setColor(11)></button>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <div class="tabs is-centered">
+          <ul>
+            <li><a href="phone_fridge.html">Fridge</a></li>
+            <li><a href="phone_shop.html">Shop</a></li>
+            <li><a href="phone_calories.html">Calories</a></li>
+            <li><a href="phone_recipes.html">Recipes</a></li>
+            <li class="is-active"><a href="phone_settings.html">Settings</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

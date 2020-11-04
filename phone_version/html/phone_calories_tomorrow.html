@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SmartFridge</title>
+    <link rel="stylesheet" href="../css/phone.css" />
+  </head>
+
+<style>
+
+  .center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .center-right {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left:90%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .center-left {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left:10%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .piechart {
+        margin: 0;
+        left:30%;
+        display: block;
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-image: conic-gradient(
+            pink 70deg,
+            lightblue 0 235deg,
+            orange 0);
+  }
+</style>
+
+  <body>
+    <div class="columns is-mobile is-centered">
+      <div class="column is-half">
+        <div class="box">
+          <h1 class="has-background-black has-text-black">TEXT SAMPLE</h1>
+          <section class="hero is-primary">
+            <div class="hero-body">
+              <div class="container">
+
+                <div class="center-left">
+                  <a class="button is-primary is-inverted is-outlined is-centered" href="phone_calories.html">Today</a>
+                </div>
+
+                <div class="center">
+                  <h1 class="title">Nov. 4, 2020</h1>
+                </div>
+
+                <div class="center-right">
+                  <input type="submit" class="button is-primary is-inverted is-outlined is-centered" value="Nov. 5, 2020" onclick=otherpage()></input>
+                </div>
+
+              </div>
+            </div>
+          </section>
+
+
+          <section class="section">
+            <div class="container">
+              <div class="columns is-mobile is-centered">
+                <figure>
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>
+                          <a class="button is-primary is-centered">Breakfast</a>
+                        </th>
+                        <th>
+                          <a class="button is-primary is-centered">Lunch</a>
+                        </th>
+                        <th>
+                          <a class="button is-primary is-centered">Dinner</a>
+                        </th>
+                        <th>
+                          <a class="button is-primary is-centered">Snack</a>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tr>
+                    </tr>
+                    <tr>
+                      <td>
+                          <p class="bd-notification is-primary has-text-centered">Number</p>
+                      </td>
+                      <td>
+                          <p class="bd-notification is-primary has-text-centered">Number</p>
+                      </td>
+                      <td>
+                          <p class="bd-notification is-primary has-text-centered">Number</p>
+                      </td>
+                      <td>
+                          <p class="bd-notification is-primary has-text-centered">Number</p>
+                      </td>
+                    </tr>
+                  </table>
+                </figure>
+              </div>
+            </div>
+          </section>
+
+          <section class="section">
+            <div class="container">
+              <div class="columns is-mobile is-centered">
+                <figure>
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <td>Consumed: </td>
+                        <td>Number</td>
+                      </tr>
+                      <tr>
+                        <td>Burned: </td>
+                        <td>Number</td>
+                      </tr>
+                      <tr>
+                        <td>Net: </td>
+                        <td>Number</td>
+                      </tr>
+                    </thead>
+
+                  </table>
+                </figure>
+              </div>
+            </div>
+
+          </section>
+
+
+          <section class="section">
+            <div class="container">
+              <div class="columns is-mobile">
+                <div class="column">
+                  <div class="center_left">
+                    <div class="piechart"></div>
+                  </div>
+                </div>
+
+                <div class="column">
+                  <figure>
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <td>Fat: </td>
+                          <td>Percentage</td>
+                        </tr>
+                        <tr>
+                          <td>Carbs: </td>
+                          <td>Percentage</td>
+                        </tr>
+                        <tr>
+                          <td>Prot: </td>
+                          <td>Percentage</td>
+                        </tr>
+                      </thead>
+
+                    </table>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="section">
+            <div id="container">
+              <div class="columns is-mobile">
+                <div class="column is-centered">
+                  <div class="column is-centered">
+                    <p class="bd-notification is-primary has-text-centered">Number Calories Left</p>
+                  </div>
+                  <progress class="progress" value="15" max="100">
+                  </progress>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <div class="tabs is-centered">
+            <ul>
+              <li><a href="phone_fridge.html">Fridge</a></li>
+              <li><a href="phone_shop.html">Shop</a></li>
+              <li class="is-active">
+                <a href="phone_calories.html">Calories</a>
+              </li>
+              <li><a href="phone_recipes.html">Recipes</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+
+</html>

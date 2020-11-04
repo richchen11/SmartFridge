@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SmartFridge</title>
+    <link rel="stylesheet" href="../css/phone.css" />
+  </head>
+
+<style>
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.center-right {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left:95%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.center-left {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  right:85%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.map-responsive{
+  overflow:hidden;
+  padding-bottom:56.25%;
+  position:relative;
+  height:0;
+}
+.map-responsive iframe{
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:absolute;
+}
+</style>
+
+  <body>
+    <div class="columns is-mobile is-centered">
+      <div class="column is-half">
+        <div class="box">
+          <h1 class="has-background-black has-text-black">TEXT SAMPLE</h1>
+          <section class="hero is-primary">
+            <div class="hero-body">
+              <div class="container">
+                <div class="center-left">
+                  <a class="button is-primary is-inverted is-outlined is-centered" href="phone_shop.html">Back</a>
+                </div>
+
+                <div class="center">
+                  <h1 class="title">Trader Joe's</h1>
+                </div>
+
+                <div class="center-right">
+                  <a class="button is-primary is-inverted is-outlined is-centered" href="phone_shop_stores.html">Stores</a>
+                </div>
+
+              </div>
+            </div>
+          </section>
+
+
+          <section class="section">
+              <div class="columns is-mobile is-centered">
+                <div class="column">
+                    <figure>
+                      <table class="table is-borderless">
+                        <tbody>
+                          <tr>
+                            <td>
+                            <a href="https://locations.traderjoes.com/md/silver-spring/652/?utm_source=gmb&utm_medium=organic&utm_campaign=local">
+                              Website
+                            </a>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td>
+                            <a href="https://maps.google.com/maps?ll=39.031333,-77.003501&z=14&t=m&hl=en&gl=US&mapclient=embed&daddr=Trader%20Joe%27s%2010741%20Columbia%20Pike%20Silver%20Spring%2C%20MD%2020901@39.0313332,-77.0035012">
+                              Directions
+                            </a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </figure>
+                </div>
+                <div class="column">
+                  <figure>
+                    <table class="table is-borderless">
+                      <tbody>
+                        <tr><td>Store Hours:</td><td>Monday, 8AM–9PM</td></tr>
+                        <tr><td> </td><td>Tuesday, 8AM–9PM</td></tr>
+                        <tr><td> </td><td>Wednesday, 8AM–9PM</td></tr>
+                        <tr><td> </td><td>Thursday, 8AM–9PM</td></tr>
+                        <tr><td> </td><td>Friday, 8AM–9PM</td></tr>
+                        <tr><td> </td><td>Saturday, 8AM–9PM</td></tr>
+                        <tr><td> </td><td>Sunday, 8AM–9PM</td></tr>
+                      </tbody>
+                    </table>
+                  </figure>
+                </div>
+
+              </div>
+          </section>
+
+
+          <div class="map-responsive">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12397.190462425171!2d-77.0035012!3d39.0313332!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x761ecbfd451b2a2e!2sTrader%20Joe&#39;s!5e0!3m2!1sen!2sus!4v1604438331659!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          </div>
+          <div class="tabs is-centered">
+            <ul>
+              <li><a href="phone_fridge.html">Fridge</a></li>
+              <li class="is-active"><a href="phone_shop.html">Shop</a></li>
+              <li><a href="phone_calories.html">Calories</a></li>
+              <li><a href="phone_recipes.html">Recipes</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
