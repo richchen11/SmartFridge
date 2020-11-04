@@ -41,7 +41,7 @@ let breakfastData = [
     {
         discription : "As fast food restaurants will testify, breakfast sandwiches (like this sausage and egg one) are a very popular way to start the day.",
         mealName : "Sausage and Egg Sandwich",
-        imgs: "../images/breakfast_pictures/sausage_egg_sandwich.png"
+        imgs: " "
     },
     {
         discription : "Omelets come in endless varieties, especially when you are considering the stuffed variety",
