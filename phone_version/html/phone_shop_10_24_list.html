@@ -7,126 +7,27 @@
     <link rel="stylesheet" href="../css/phone.css" />
   </head>
 
-<style>
+<link rel="stylesheet" href="../css/shop.css">
 
-.center {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-.center-right {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left:95%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-.center-left {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  right:85%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-input[type="text"]::placeholder {
-
-                /* Firefox, Chrome, Opera */
-                text-align: center;
-            }
-
-input{
-
-                /* Firefox, Chrome, Opera */
-                text-align: center;
-            }
-
-</style>
-
-<SCRIPT language="javascript">
-  function addRow(tableID) {
-
-    var table = document.getElementById(tableID);
-
-    var rowCount = table.rows.length;
-    var row = table.insertRow(rowCount);
-
-    var colCount = table.rows[0].cells.length;
-
-    for(var i=0; i<colCount; i++) {
-
-      var newcell	= row.insertCell(i);
-
-      newcell.innerHTML = table.tBodies[0].rows[0].cells[i].innerHTML;
-      //alert(newcell.childNodes);
-      switch(newcell.childNodes[0].type) {
-        case "text":
-            newcell.childNodes[0].value = "";
-            break;
-        case "checkbox":
-						newcell.childNodes[0].checked = false;
-						break;
-        case "select-one":
-            newcell.childNodes[0].selectedIndex = 0;
-            break;
-      }
-    }
-  }
-
-  function deleteRow(tableID) {
-			try {
-			var table = document.getElementById(tableID);
-			var rowCount = table.rows.length;
-
-			for(var i=0; i<rowCount; i++) {
-				var row = table.rows[i];
-				var chkbox = row.cells[0].childNodes[0];
-				if(null != chkbox && true == chkbox.checked) {
-					if(rowCount <= 1) {
-						alert("Cannot delete all the rows.");
-						break;
-					}
-					table.deleteRow(i);
-					rowCount--;
-					i--;
-				}
-
-
-			}
-			}catch(e) {
-				alert(e);
-			}
-		}
-
-  function save(){
-    alert("Your list has been saved! (Not really in the protype)");
-  }
-	</SCRIPT>
+<script src="../javascript/shop_new_list.js"></script>
 
   <body>
     <div class="columns is-mobile is-centered">
-      <div class="column is-half">
+      <div class="column is-one-third">
         <div class="box">
           <h1 class="has-background-black has-text-black">TEXT SAMPLE</h1>
           <section class="hero is-primary">
             <div class="hero-body">
               <div class="container">
                 <div class="center-left">
-                  <a class="button is-primary is-inverted is-outlined is-centered" href="phone_shop.html">Back</a>
+                  <a class="button is-primary is-inverted is-centered" href="phone_shop.html">Back</a>
                 </div>
 
                 <div class="center">
                   <input class="input is-rounded" type="text" value="List:10/24"></input>
                 </div>
                 <div class="center-right">
-                  <input type="submit" class="button is-primary is-inverted is-outlined is-centered" value="Save" onclick=save()></input>
+                  <input type="submit" class="button is-primary is-inverted is-centered" value="Save" onclick=save()></input>
                 </div>
               </div>
             </div>
