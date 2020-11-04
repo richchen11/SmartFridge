@@ -7,49 +7,7 @@
     <link rel="stylesheet" href="../css/phone.css" />
   </head>
 
-<style>
-
-  .center {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-  }
-
-  .center-right {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left:90%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-  }
-
-  .center-left {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left:10%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-  }
-
-  .piechart {
-        margin: 0;
-        left:30%;
-        display: block;
-        position: absolute;
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        background-image: conic-gradient(
-            pink 109.5deg,
-            orange 0 200.75deg,
-            lightblue 0);
-  }
-</style>
+  <link rel="stylesheet" href="../css/calories.css">
 
   <body>
     <div class="columns is-mobile is-centered">
@@ -76,8 +34,21 @@
             </div>
           </section>
 
-
           <section class="section">
+            <div class="block">
+              <div id="container">
+                <div class="columns is-mobile">
+                  <div class="column is-centered">
+                    <div class="column is-centered">
+                      <p class="bd-notification is-primary has-text-centered is-size-2">1455 Calories Left</p>
+                    </div>
+                    <progress class="progress is-primary" value="48" max="100">
+                    </progress>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <div class="container">
               <div class="columns is-mobile is-centered">
                 <figure>
@@ -102,16 +73,16 @@
                     </tr>
                     <tr>
                       <td>
-                          <p class="bd-notification is-primary has-text-centered">505</p>
+                          <p class="bd-notification is-primary has-text-centered is-size-3">505</p>
                       </td>
                       <td>
-                          <p class="bd-notification is-primary has-text-centered">640</p>
+                          <p class="bd-notification is-primary has-text-centered is-size-3">640</p>
                       </td>
                       <td>
-                          <p class="bd-notification is-primary has-text-centered">0</p>
+                          <p class="bd-notification is-primary has-text-centered is-size-3">0</p>
                       </td>
                       <td>
-                          <p class="bd-notification is-primary has-text-centered">0</p>
+                          <p class="bd-notification is-primary has-text-centered is-size-3">0</p>
                       </td>
                     </tr>
                   </table>
@@ -120,11 +91,11 @@
             </div>
           </section>
 
-          <section class="section">
+          <section>
             <div class="container">
               <div class="columns is-mobile is-centered">
                 <figure>
-                  <table class="table">
+                  <table class="table is-size-4">
                     <thead>
                       <tr>
                         <td>Consumed: </td>
@@ -132,7 +103,10 @@
                       </tr>
                       <tr>
                         <td>Burned: </td>
-                        <td>200</td>
+                        <td>
+                          200
+                          <a class="button is-primary is-centered">+</a>
+                        </td>
                       </tr>
                       <tr>
                         <td>Net: </td>
@@ -144,53 +118,36 @@
                 </figure>
               </div>
             </div>
-
           </section>
 
 
           <section class="section">
             <div class="container">
-              <div class="columns is-mobile">
+              <div class="columns is-mobile is-center">
                 <div class="column">
-                  <div class="center_left">
-                    <div class="piechart"></div>
-                  </div>
+                    <div class="piechart2"></div>
                 </div>
 
                 <div class="column">
                   <figure>
-                    <table class="table">
+                    <table class="table is-size-5">
                       <thead>
                         <tr>
-                          <td>Fat: </td>
-                          <td>30</td>
+                          <td><p style="color:pink">Fat: </p></td>
+                          <td>30%</td>
                         </tr>
                         <tr>
-                          <td>Carbs: </td>
-                          <td>45</td>
+                          <td><p style="color:lightblue">Carbs: </p></td>
+                          <td>45%</td>
                         </tr>
                         <tr>
-                          <td>Prot: </td>
-                          <td>25</td>
+                          <td><p style="color:orange">Prot: </p></td>
+                          <td>25%</td>
                         </tr>
                       </thead>
 
                     </table>
                   </figure>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section class="section">
-            <div id="container">
-              <div class="columns is-mobile">
-                <div class="column is-centered">
-                  <div class="column is-centered">
-                    <p class="bd-notification is-primary has-text-centered">Number Calories Left</p>
-                  </div>
-                  <progress class="progress" value="15" max="100">
-                  </progress>
                 </div>
               </div>
             </div>
