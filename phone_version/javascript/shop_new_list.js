@@ -16,7 +16,7 @@
       //alert(newcell.childNodes);
       switch(newcell.childNodes[0].type) {
         case "text":
-            newcell.childNodes[0].value = "";
+            newcell.childNodes[0].value = " ";
             break;
         case "checkbox":
 						newcell.childNodes[0].checked = false;
@@ -37,7 +37,7 @@
 				var row = table.rows[i];
 				var chkbox = row.cells[0].childNodes[0];
 				if(null != chkbox && true == chkbox.checked) {
-					if(rowCount <= 1) {
+					if(rowCount <= 2) {
 						alert("Cannot delete all the rows.");
 						break;
 					}
