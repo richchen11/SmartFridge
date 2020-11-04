@@ -56,3 +56,11 @@
   function save(){
     alert("Your list has been saved! (Not really in the protype)");
   }
+
+  function no_lists(){
+    alert("You have no lists for this store!");
+  }
+
+  function not_my_store(){
+    alert("This store is not listed as one of your stores. Add this store before creating a list!");
+  }

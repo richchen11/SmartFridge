@@ -8,6 +8,7 @@
   </head>
 
 <link rel="stylesheet" href="../css/shop.css">
+<script src="../javascript/shop_new_list.js"></script>
 
   <body>
     <div class="columns is-mobile is-centered">
@@ -37,39 +38,46 @@
           <section class="section">
               <div class="columns is-mobile is-centered">
                 <div class="column">
-                    <figure>
-                      <table class="table is-borderless">
-                        <tbody>
-                          <tr>
-                            <td>
-                            <a href="https://locations.harristeeter.com/dc/washington/352/?utm_source=Google&utm_medium=Maps&utm_campaign=Google+Places">
-                              Website
-                            </a>
-                            </td>
-                          </tr>
-
-                          <tr>
-                            <td>
-                            <a href="https://maps.google.com/maps?ll=38.905796,-77.005345&z=14&t=m&hl=en&gl=US&mapclient=embed&daddr=Harris%20Teeter%201201%20First%20St%20Ne%20Constitution%20Ave%20NE%20Washington%2C%20DC%2020002@38.9057955,-77.00534499999999">
-                              Directions
-                            </a>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </figure>
+                  <section class="section">
+                    <div class="columns is-mobile is-centered">
+                      <div class="block">
+                        <input type="submit" class="button is-large is-primary is-centered" value="My Lists" onclick=no_lists()>
+                        </input>
+                      </div>
+                    </div>
+                  </section>
+                  <section class="section">
+                    <div class="columns is-mobile is-centered">
+                      <div class="block">
+                          <a class="button is-large is-primary is-centered" href="https://locations.harristeeter.com/dc/washington/352/?utm_source=Google&utm_medium=Maps&utm_campaign=Google+Places">
+                            Website
+                          </a>
+                      </div>
+                    </div>
+                  </section>
+                  <section class="section">
+                    <div class="columns is-mobile is-centered">
+                      <div class="block">
+                          <a class="button is-large is-primary is-centered" href="https://maps.google.com/maps?ll=38.905796,-77.005345&z=14&t=m&hl=en&gl=US&mapclient=embed&daddr=Harris%20Teeter%201201%20First%20St%20Ne%20Constitution%20Ave%20NE%20Washington%2C%20DC%2020002@38.9057955,-77.00534499999999">
+                            Directions
+                          </a>
+                      </div>
+                    </div>
+                  </section>
                 </div>
+
                 <div class="column">
                   <figure>
-                    <table class="table is-borderless">
+                    <table class="table is-borderless has-text-centered">
                       <tbody>
-                        <tr><td>Store Hours:</td><td>Monday, 6AM–11PM</td></tr>
-                        <tr><td> </td><td>Tuesday, 6AM–11PM</td></tr>
-                        <tr><td> </td><td>Wednesday, 6AM–11PM</td></tr>
-                        <tr><td> </td><td>Thursday, 6AM–11PM</td></tr>
-                        <tr><td> </td><td>Friday, 6AM–11PM</td></tr>
-                        <tr><td> </td><td>Saturday, 6AM–11PM</td></tr>
-                        <tr><td> </td><td>Sunday, 6AM–11PM</td></tr>
+                        <th>Store Hours:</th>
+                        <tr><td>Monday, 6AM–11PM</td></tr>
+                        <td>Tuesday, 6AM–11PM</td></tr>
+                        <td>Wednesday, 6AM–11PM</td></tr>
+                        <td>Thursday, 6AM–11PM</td></tr>
+                        <td>Friday, 6AM–11PM</td></tr>
+                        <td>Saturday, 6AM–11PM</td></tr>
+                        <td>Sunday, 6AM–11PM</td></tr>
                       </tbody>
                     </table>
                   </figure>
@@ -80,7 +88,8 @@
 
 
           <div class="map-responsive">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12419.18130905206!2d-77.005345!3d38.9057955!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xec6c205384a213c!2sHarris%20Teeter!5e0!3m2!1sen!2sus!4v1604437585506!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+              <!frame src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12408.514671982697!2d-76.9513236!3d38.9667299!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3fbb2010628a7e3f!2sSafeway!5e0!3m2!1sen!2sus!4v1604009587596!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+              <img src="../images/store_maps/harris_map.png">
           </div>
           <div class="tabs is-centered">
             <ul>
@@ -88,6 +97,7 @@
               <li class="is-active"><a href="phone_shop.html">Shop</a></li>
               <li><a href="phone_calories.html">Calories</a></li>
               <li><a href="phone_recipes.html">Recipes</a></li>
+              <li><a href="phone_settings.html">Settings</a></li>
             </ul>
           </div>
         </div>
