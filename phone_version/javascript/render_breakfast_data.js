@@ -1,6 +1,7 @@
 window.onload = () => {
     renderBreakfastData()
 }
+
 let breakfastData = [
     {
         discription : "Regardless of how much of a hurry you are in, pancakes is one breakfast that you really do need to take slow. This makes them a fantastic way to slow down and get your day going on the right food, rather than rushing right from the start.",
@@ -68,6 +69,7 @@ function renderBreakfastData() {
                 <h7 class="card-title"><h5><b>${menuOption.mealName}</b></h7>
                 <p class="card-text">${menuOption.discription}</p>
                 <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <a href="../html/phone_receipe_instruction.html" class="btn btn-primary stretched-link"></a>
             </div>
         </div>
         `;
