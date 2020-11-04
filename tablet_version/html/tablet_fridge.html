@@ -85,7 +85,7 @@
                   </div>
                   <div class="message-body" id = "coke">
                   8 cans of Coca-Cola
-                  <button class="button" onclick = "myDelete(coke)" > - </button>
+                  <button class="button" onclick = "myDelete(coke)"> - </button>
                   </div>
                   <div class="message-body" id = "lemonade">
                   2 liters of Lemonade
@@ -107,7 +107,7 @@
         document.getElementById("myinput").style.display = 'none';
         let inputVal = document.getElementById("categoryInput").value;
         let xmlString = "<div id = \'" + inputVal + "\'> <div class = 'message-header'>" + inputVal + " \
-         <button class = \'delete\' onclick = \'myDelete(" + inputVal + ")\'>" + "</button></div></div>";
+         <button onclick = \'myDelete(" + inputVal + ")\'> -" + "</button></div></div>";
 
         var newCategory = new DOMParser().parseFromString(xmlString, "text/xml");
     
