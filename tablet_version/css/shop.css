@@ -1,0 +1,56 @@
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.center-right {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left:95%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.center-left {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  right:80%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.map-responsive{
+  overflow:hidden;
+  padding-bottom:56.25%;
+  position:relative;
+  height:0;
+}
+.map-responsive iframe{
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:absolute;
+}
+
+input[type="text"]::placeholder {
+
+                /* Firefox, Chrome, Opera */
+                text-align: center;
+            }
+
+input{
+
+                /* Firefox, Chrome, Opera */
+                text-align: center;
+            }
+
+figcaption {
+    text-align: center
+}

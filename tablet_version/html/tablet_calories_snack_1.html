@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SmartFridge</title>
+    <link rel="stylesheet" href="../css/tablet.css" />
+  </head>
+
+<link rel="stylesheet" href="../css/calories.css">
+
+<script src="../javascript/shop_new_list.js"></script>
+<script src="../javascript/calories.js"></script>
+
+<body>
+  <div class="columns is-mobile is-centered">
+    <div class="column is-four-fifths">
+      <div class="box">
+        <section class="hero is-primary">
+          <div class="hero-body">
+            <div class="container">
+              <div class="columns is-mobile is-centered">
+                <h1 class="title is-size-1">Calories</h1>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="columns is-mobile is-centered">
+          <div class = "column is-one-quarter">
+           <aside class="menu">
+              <ul class = "menu-list is-size-1">
+                 <li class="is-active"><a href = "tablet_fridge.html">Fridge</a></li>
+                 <li><a href="tablet_shop.html">Shop </a></li>
+                 <li><a href="tablet_calories.html">Calories</a></li>
+                 <li><a href="tablet_recipes.html">Recipes</a></li>
+                 <li><a href="tablet_settings.html">Settings</a></li>
+               </ul>
+           </aside>
+          </div>
+          <div class="column">
+            <section class="hero is-white">
+              <div class="hero-body">
+                <div class="container">
+                <div class="center-left">
+                  <a class="button is-primary is-centered" href="tablet_calories_yesterday.html">Back</a>
+                </div>
+
+                <div class="center">
+                  <h1 class="title">Snack</h1>
+                </div>
+                <div class="center-right">
+                  <input type="submit" class="button is-primary is-centered" value="Save" onclick=save()></input>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="section">
+              <div class="columns is-mobile is-centered">
+                <figure>
+                  <table class="table is-narrow" id="dataTable" width="350px">
+                    <thead>
+                      <tr>
+                        <th></th>
+                        <th>Food/Item</th>
+                        <th>Serving(s)</th>
+                        <th>Calories</th>
+                        <th>Fat(g)</th>
+                        <th>Carb(g)</th>
+                        <th>Prot(g)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><INPUT class="checkbox" type="checkbox" name="chk"/></td>
+                  			<td><INPUT class="input" type="text" name="txt" value="Granola Bar"/></td>
+                        <td><div class="select"><select type="select-one">
+                              <OPTION>--</OPTION>
+                              <OPTION>0.5</OPTION>
+                              <OPTION selected>1</OPTION>
+                              <OPTION>1.5</OPTION>
+                              <OPTION>2</OPTION>
+                              <OPTION>2.5</OPTION>
+                              <OPTION>3</OPTION>
+                              <OPTION>3.5</OPTION>
+                              <OPTION>4</OPTION>
+                              <OPTION>4.5</OPTION>
+                              <OPTION>5</OPTION>
+                            </SELECT>
+                          </div>
+                        </td>
+                        <td><INPUT class="input" type="text" name="txt" value="110"/></td>
+                        <td><INPUT class="input" type="text" name="txt" value="3"/></td>
+                        <td><INPUT class="input" type="text" name="txt" value="19"/></td>
+                        <td><INPUT class="input" type="text" name="txt" value="1"/></td>
+                  		</tr>
+                    </tbody>
+                	</table>
+                </figure>
+              </div>
+            </section>
+
+              <section class="section">
+                  <div class="columns is-mobile is-centered">
+                    <INPUT class="button" type="button" value="Add" onclick="addRow('dataTable')"/>
+
+                    <INPUT class="button" type="button" value="Delete" onclick="deleteRow('dataTable')" />
+                </figure>
+              </div>
+
+          </section>
+
+          <section class="section">
+          </section>
+
+          <section class="section">
+          </section>
+
+          <section class="section">
+          </section>
+
+          <section class="section">
+          </section>
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

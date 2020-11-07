@@ -1,0 +1,72 @@
+
+
+  .center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .center-right {
+    margin: 0;
+    position: absolute;
+    top: 60%;
+    left:80%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .center-left {
+    margin: 0;
+    position: absolute;
+    top: 0%;
+    left:20%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .piechart1 {
+        margin: 0;
+        top:-250%;
+        left:43%;
+        display: block;
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-image: conic-gradient(
+            pink 100.8deg,
+            orange 0 208.8deg,
+            lightblue 0);
+  }
+
+  .piechart2 {
+        margin: 0;
+        top:-250%;
+        left:43%;
+        display: block;
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-image: conic-gradient(
+            pink 25.2deg,
+            orange 0 54deg,
+            lightblue 0);
+  }
+
+  .piechart3 {
+        margin: 0;
+        top:-250%;
+        left:43%;
+        display: block;
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-image: conic-gradient(
+            turquoise 360deg,
+            blue 0 0);
+  }
