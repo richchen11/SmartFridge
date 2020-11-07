@@ -10,8 +10,8 @@
 .center-right {
   margin: 0;
   position: absolute;
-  top: 50%;
-  left:95%;
+  top: 60%;
+  left:80%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
@@ -19,8 +19,44 @@
 .center-left {
   margin: 0;
   position: absolute;
-  top: 50%;
-  right:80%;
+  top: 0%;
+  left:20%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.new_list {
+  margin: 0;
+  position: absolute;
+  top: 0%;
+  left:30.5%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.new_list_no_list {
+  margin: 0;
+  position: absolute;
+  top: 70%;
+  left:0%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.b {
+  margin: 0;
+  position: absolute;
+  top: 70%;
+  left:35%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.choose {
+  margin: 0;
+  position: absolute;
+  top: 0%;
+  left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
