@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>SmartFridge</title>
-    <link rel="stylesheet" href="../css/phone.css" />
+    <link rel="stylesheet" href="../css/tablet.css" />
   </head>
 
 <link rel="stylesheet" href="../css/shop.css">
@@ -16,16 +16,38 @@ function save(){
 
 </script>
 
-  <body>
-    <div class="columns is-mobile is-centered">
-      <div class="column is-one-third">
-        <div class="box">
-          <h1 class="has-background-black has-text-black">TEXT SAMPLE</h1>
-          <section class="hero is-primary">
-            <div class="hero-body">
-              <div class="container">
+<body>
+  <div class="columns is-mobile is-centered">
+    <div class="column is-four-fifths">
+      <div class="box">
+        <section class="hero is-primary">
+          <div class="hero-body">
+            <div class="container">
+              <div class="columns is-mobile is-centered">
+                <h1 class="title is-size-1">Calories</h1>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="columns is-mobile is-centered">
+          <div class = "column is-one-quarter">
+           <aside class="menu">
+              <ul class = "menu-list is-size-1">
+                 <li class="is-active"><a href = "tablet_fridge.html">Fridge</a></li>
+                 <li><a href="tablet_shop.html">Shop </a></li>
+                 <li><a href="tablet_calories.html">Calories</a></li>
+                 <li><a href="tablet_recipes.html">Recipes</a></li>
+                 <li><a href="tablet_settings.html">Settings</a></li>
+               </ul>
+           </aside>
+          </div>
+          <div class="column">
+            <section class="hero is-white">
+              <div class="hero-body">
+                <div class="container">
                 <div class="center-left">
-                  <a class="button is-primary is-inverted is-centered" href="phone_shop.html">Back</a>
+                  <a class="button is-primary is-centered" href="tablet_shop.html">Back</a>
                 </div>
 
                 <div class="center">
@@ -33,7 +55,7 @@ function save(){
                 </div>
 
                 <div class="center-right">
-                  <input type="submit" class="button is-primary is-inverted is-centered" value="Save" onclick=save()></input>
+                  <input type="submit" class="button is-primary is-centered" value="Save" onclick=save()></input>
                 </div>
 
             </div>
@@ -48,7 +70,7 @@ function save(){
                       <tr>
                         <td><INPUT type="checkbox" name="chk" checked="true"/></td>
                         <td>
-                          <a href="phone_shop_safeway.html">
+                          <a href="tablet_shop_safeway.html">
                             <p class="content is-large">Safeway</p>
                           </a>
                         </td>
@@ -56,7 +78,7 @@ function save(){
                       <tr>
                         <td><INPUT type="checkbox" name="chk" checked="true"/></td>
                         <td>
-                          <a href="phone_shop_giant.html">
+                          <a href="tablet_shop_giant.html">
                             <p class="content is-large">Giant</p>
                           </a>
                         </td>
@@ -64,7 +86,7 @@ function save(){
                       <tr>
                         <td><INPUT type="checkbox" name="chk"/></td>
                         <td>
-                          <a href="phone_shop_weis.html">
+                          <a href="tablet_shop_weis.html">
                             <p class="content is-large">Weis Markets</p>
                           </a>
                         </td>
@@ -72,7 +94,7 @@ function save(){
                       <tr>
                         <td><INPUT type="checkbox" name="chk" checked="true"/></td>
                         <td>
-                          <a href="phone_shop_walmart.html">
+                          <a href="tablet_shop_walmart.html">
                             <p class="content is-large">Walmart</p>
                           </a>
                         </td>
@@ -80,7 +102,7 @@ function save(){
                       <tr>
                         <td><INPUT type="checkbox" name="chk"/></td>
                         <td>
-                          <a href="phone_shop_harris.html">
+                          <a href="tablet_shop_harris.html">
                             <p class="content is-large">Harris Teeter</p>
                           </a>
                         </td>
@@ -88,7 +110,7 @@ function save(){
                       <tr>
                         <td><INPUT type="checkbox" name="chk"/></td>
                         <td>
-                          <a href="phone_shop_wegmans.html">
+                          <a href="tablet_shop_wegmans.html">
                             <p class="content is-large">Wegmans</p>
                           </a>
                         </td>
@@ -96,7 +118,7 @@ function save(){
                       <tr>
                         <td><INPUT type="checkbox" name="chk" checked="true"/></td>
                         <td>
-                          <a href="phone_shop_lidl.html">
+                          <a href="tablet_shop_lidl.html">
                             <p class="content is-large">Lidl</p>
                           </a>
                         </td>
@@ -104,7 +126,7 @@ function save(){
                       <tr>
                         <td><INPUT type="checkbox" name="chk"/></td>
                         <td>
-                            <a href="phone_shop_trader_joe.html">
+                            <a href="tablet_shop_trader_joe.html">
                               <h1 class="content is-large">Tader Joe's</h1>
                             </a>
                         </td>
@@ -112,7 +134,7 @@ function save(){
                       <tr>
                         <td><INPUT type="checkbox" name="chk"/></td>
                         <td>
-                          <a href="phone_shop_costco.html">
+                          <a href="tablet_shop_costco.html">
                             <p class="content is-large">Costco</p>
                           </a>
                         </td>
@@ -128,19 +150,7 @@ function save(){
           <section class="section">
           </section>
 
-          <section class="section">
-          </section>
 
-
-          <div class="tabs is-centered">
-            <ul>
-              <li><a href="phone_fridge.html">Fridge</a></li>
-              <li class="is-active"><a href="phone_shop.html">Shop</a></li>
-              <li><a href="phone_calories.html">Calories</a></li>
-              <li><a href="phone_recipes.html">Recipes</a></li>
-              <li><a href="phone_settings.html">Settings</a></li>
-            </ul>
-          </div>
         </div>
       </div>
     </div>
