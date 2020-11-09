@@ -64,3 +64,7 @@
   function not_my_store(){
     alert("This store is not listed as one of your stores. Add this store before creating a list!");
   }
+
+  function website(link){
+    alert("Would open link: " + link)
+  }
