@@ -28,23 +28,26 @@
     }
 
     figcaption {
-        text-align: center
+      text-align: center;
     }
   </style>
 
   <!-- redirects to login if not logged in -->
   <body onload="isLoggedIn()">
     <div class="columns is-mobile is-centered">
-      <div class="column is-half">
+      <div class="column is-one-third">
         <div class="box">
           <h1 class="has-background-black has-text-black">TEXT SAMPLE</h1>
 
           <!-- header -->
-          <section class="hero is-primary">
+          <section class="hero is-primary" id="hero">
             <div class="hero-body">
               <div class="container">
                 <div class="center">
                   <h1 class="title">User Settings</h1>
+                </div>
+                <div class="center-right">
+                  <a id="logout" class="button is-primary is-inverted is-small" href="phone_settings.html">Log Out</a>
                 </div>
               </div>
             </div>
@@ -52,14 +55,6 @@
 
           <!-- user info -->
           <section class="section">
-            <div class="columns is-mobile is-centered">
-              <div class="container">
-                <div class="center-right">
-                  <a class="button is-primary is-outlined is-centered" href="phone_shop_new_list.html">+</a>
-                </div>
-              </div>
-            </div>
-
             <!-- profile picture -->
             <div class="container">
               <div class="columns is-mobile">
@@ -80,73 +75,98 @@
           </section>
 
           <section class="section">
-            <div class="columns">
-              <!-- health settings -->
-              <div class="column">
-                <article class="message is-primary">
-                  <div class="message-header">
-                    <p>Health Profile</p>
-                    <button class="button is-small">
-                      <span>Edit</span>
-                    </button>
+            <!-- health settings -->
+            <article class="message is-primary">
+              <div class="message-header" id="health">
+                <p>Health Profile</p>
+                <button class="button is-primary is-inverted is-small" id="edit">
+                  <span>Edit</span>
+                </button>
+                <div class="modal" id="editModal">
+                  <div class="modal-background"></div>
+                  <div class="modal-card">
+                    <header class="modal-card-head">
+                      <p class="modal-card-title">Edit Health Profile</p>
+                    </header>
+                    <section class="modal-card-body">
+                      <input id="a" class="input is-rounded" type="text" placeholder="Sex">
+                      <input id="b" class="input is-rounded" type="text" placeholder="Age">
+                      <input id="c" class="input is-rounded" type="text" placeholder="Height">
+                      <input id="d" class="input is-rounded" type="text" placeholder="Weight">
+                    </section>
+                    <footer class="modal-card-foot">
+                      <button class="button is-success" onclick="reloadWithEdit()">Save changes</button>
+                      <button class="button" id="close">Cancel</button>
+                    </footer>
                   </div>
+                </div>
+              </div>
+              <div class="columns">
+                <div class="column">
+                  <div class="message-body" placeholder="sex" id="sex"></div>
+                  <div class="message-body" placeholder="age" id="age"></div>
+                </div>
+                <div class="column">
                   <div class="message-body" placeholder="ht" id="ht"></div>
                   <div class="message-body" placeholder="wt" id="wt"></div>
-                </article>
+                </div>
               </div>
-              <!-- app preferences -->
-              <div class="column">
-                <article class="message is-primary">
-                  <div class="message-header">
-                    <p>Preferences</p>
-                  </div>
+            </article>
+
+            <!-- app preferences -->
+            <article class="message is-primary">
+              <div class="message-header" id="pref">
+                <p>Preferences</p>
+              </div>
+              <div class="columns">
+                <div class="column">
                   <div class="message-body" placeholder="c1" id="c1">
                     <div class="columns">
                       <div class="column">
-                        <button class="button" style="background-color:#c51111;" onClick=setColor(0)></button>
+                        <button id="b0" class="button" style="background-color:#c51111;" onClick=setColor(0)></button>
                       </div>
                       <div class="column">
-                        <button class="button" style="background-color:#ef7d0d;" onClick=setColor(1)></button>
+                        <button id="b1" class="button" style="background-color:#ef7d0d;" onClick=setColor(1)></button>
                       </div>
                       <div class="column">
-                        <button class="button" style="background-color:#f5f557;" onClick=setColor(2)></button>
+                        <button id="b2" class="button" style="background-color:#f5f557;" onClick=setColor(2)></button>
                       </div>
                       <div class="column">
-                        <button class="button" style="background-color:#50ef39;" onClick=setColor(3)></button>
+                        <button id="b3" class="button" style="background-color:#50ef39;" onClick=setColor(3)></button>
                       </div>
                       <div class="column">
-                        <button class="button" style="background-color:#117f2d;" onClick=setColor(4)></button>
+                        <button id="b4" class="button" style="background-color:#117f2d;" onClick=setColor(4)></button>
                       </div>
                       <div class="column">
-                        <button class="button" style="background-color:#d6e0f0;" onClick=setColor(5)></button>
+                        <button id="b5" class="button" style="background-color:#b6c0d0;" onClick=setColor(5)></button>
                       </div>
                     </div>
                   </div>
                   <div class="message-body" placeholder="c2" id="c2">
                     <div class="columns">
                       <div class="column">
-                        <button class="button" style="background-color:#00d1b2;" onClick=setColor(6)></button>
+                        <button id="b6" class="button" style="background-color:#00d1b2;" onClick=setColor(6)></button>
                       </div>
                       <div class="column">
-                        <button class="button" style="background-color:#132ed1;" onClick=setColor(7)></button>
+                        <button id="b7" class="button" style="background-color:#132ed1;" onClick=setColor(7)></button>
                       </div>
                       <div class="column">
-                        <button class="button" style="background-color:#6b2fbb;" onClick=setColor(8)></button>
+                        <button id="b8" class="button" style="background-color:#6b2fbb;" onClick=setColor(8)></button>
                       </div>
                       <div class="column">
-                        <button class="button" style="background-color:#ed54ba;" onClick=setColor(9)></button>
+                        <button id="b9" class="button" style="background-color:#ed54ba;" onClick=setColor(9)></button>
                       </div>
                       <div class="column">
-                        <button class="button" style="background-color:#71491e;" onClick=setColor(10)></button>
+                        <button id="b10" class="button" style="background-color:#71491e;" onClick=setColor(10)></button>
                       </div>
                       <div class="column">
-                        <button class="button" style="background-color:#3f47fe;" onClick=setColor(11)></button>
+                        <button id="b11" class="button" style="background-color:#3f47fe;" onClick=setColor(11)></button>
                       </div>
                     </div>
                   </div>
-                </article>
+                </div>
               </div>
-            </div>
+            </article>
           </section>
         </section>
 
