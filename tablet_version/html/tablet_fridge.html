@@ -14,7 +14,7 @@
       .myListInput {
          display: none
       }
-</style>  
+</style>
   <body>
     <div class="columns is-mobile is-centered">
       <div class="column is-four-fifths">
@@ -37,6 +37,7 @@
                      <li><a href="tablet_shop.html">Shop </a></li>
                      <li><a href="tablet_calories.html">Calories</a></li>
                      <li><a href="tablet_recipes.html">Recipes</a></li>
+                     <li><a href="tablet_settings.html">Settings</a></li>
                    </ul>
                </aside>
               </div>
@@ -73,7 +74,7 @@
                      <input id = "listInput" class="input" type="text" placeholder="Enter Item Name" style.visibility = "hidden">
                      <button class = "button" onclick = "handleItemFormSubmission('listInput', 'freshFruit')">Submit</button>
                   </div>
-            
+
                   <div class="message-body" id = "oranges">
                   3 Oranges
                   <button class = "button" onclick = "myDelete('oranges')">Delete</button>
@@ -129,16 +130,16 @@
       let inputVal = document.getElementById("categoryInput").value;
       let xmlString = "<div id = \'" + inputVal + "Div\'> <div class = 'message-header'>" + inputVal + " \
        <div class = \'buttons has-addons\'> <button class = \'button\' id = \'" + inputVal + "\'> Delete(IN PROGRESS)</button>" +" \
-       <button class = \'button\' onclick = \'addItem(\" " + inputVal + "\")\'> Add(IN PROGRESS)" + 
+       <button class = \'button\' onclick = \'addItem(\" " + inputVal + "\")\'> Add(IN PROGRESS)" +
        "</button></div></div></div>";
        console.log(xmlString);
       var newCategory = new DOMParser().parseFromString(xmlString, "text/xml");
-          
+
       let currentDiv = document.getElementById("categories");
       currentDiv.append(newCategory.documentElement);
       document.getElementById('categoryInput').value = "";
       myListener(inputVal);
-      
+
     }
     function myListener(inputVal){
        document.getElementById(inputVal).onclick = function(){
@@ -153,7 +154,7 @@
        document.getElementById("myListInput").style.display = 'none';
        document.getElementById("myListInput2").style.display = 'none';
        let inputVal = document.getElementById(listInput).value;
-       
+
        let xmlString = "<div class = 'message-body'>" + inputVal + " \
        <button class = \'button\'> Delete(IN PROGRESS)</button>" + "</div>";
        var newItem = new DOMParser().parseFromString(xmlString, "text/xml");
