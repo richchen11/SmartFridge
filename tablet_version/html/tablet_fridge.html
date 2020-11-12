@@ -64,7 +64,7 @@
                   <div id = "freshFruit">
                   <div class="message-header">
                   Fresh Fruit
-                  <div class = "buttons">
+                  <div class = "buttons has-addons">
                   <button class = "button" onclick = "myDelete('freshFruit')">Delete</button>
                   <button class = "button" onclick = "addItem('myListInput')">Add</button>
                   </div>
@@ -90,7 +90,7 @@
                   <div id = "beverages">
                   <div class="message-header">
                   Beverages
-                  <div class = "buttons">
+                  <div class = "buttons has-addons">
                   <button class = "button" onclick = "myDelete('beverages')">Delete</button>
                   <button class = "button" onclick = "addItem('myListInput2')">Add</button>
                   </div>
@@ -128,7 +128,7 @@
       document.getElementById("myinput").style.display = 'none';
       let inputVal = document.getElementById("categoryInput").value;
       let xmlString = "<div id = \'" + inputVal + "Div\'> <div class = 'message-header'>" + inputVal + " \
-       <div class = \'buttons\'> <button class = \'button\' id = \'" + inputVal + "\'> Delete(IN PROGRESS)</button>" +" \
+       <div class = \'buttons has-addons\'> <button class = \'button\' id = \'" + inputVal + "\'> Delete(IN PROGRESS)</button>" +" \
        <button class = \'button\' onclick = \'addItem(\" " + inputVal + "\")\'> Add(IN PROGRESS)" + 
        "</button></div></div></div>";
        console.log(xmlString);
